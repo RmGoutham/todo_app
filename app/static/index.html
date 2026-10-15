@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+   <link rel="stylesheet" href="/static/style.css">
+<script src="/static/script.js" defer></script>
+</head>
+
+
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a href="/" class="brand" aria-label="TaskFlow home">
+                <span class="brand-icon">✓</span>
+                <span>TaskFlow</span>
+            </a>
+            <span class="status-badge">
+                <span class="status-dot"></span>
+                Stay productive
+            </span>
+        </header>
+
+        <main class="container">
+            <section class="hero">
+                <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+                <h1>Make today <span>count.</span></h1>
+                <p class="subtitle">
+                    Organize your tasks, track your progress, and get things done.
+                </p>
+            </section>
+
+            <section class="dashboard" aria-label="Task manager">
+                <div class="dashboard-heading">
+                    <div>
+                        <h2>My tasks</h2>
+                        <p class="section-subtitle">One step at a time.</p>
+                    </div>
+                    <span class="date-label" id="current-date"></span>
+                </div>
+
+                <form id="task-form" class="task-form">
+                    <label class="sr-only" for="task-input">New task</label>
+                    <input
+                        type="text"
+                        id="task-input"
+                        name="title"
+                        placeholder="What needs to get done?"
+                        maxlength="200"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="add-button">
+                        <span aria-hidden="true">＋</span>
+                        Add task
+                    </button>
+                </form>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <span class="stat-icon total-icon">▤</span>
+                        <div>
+                            <p>Total tasks</p>
+                            <strong id="task-count">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon completed-icon">✓</span>
+                        <div>
+                            <p>Completed</p>
+                            <strong id="completed-count">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon progress-icon">↗</span>
+                        <div>
+                            <p>Progress</p>
+                            <strong id="progress-count">0%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-heading">
+                    <h3>Your to-do list</h3>
+                    <span id="list-label">0 items</span>
+                </div>
+
+                <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">✦</div>
+                    <h3>Nothing on your list yet</h3>
+                    <p>Add your first task above and make your day productive.</p>
+                </div>
+
+                <p id="message" class="message" role="status" aria-live="polite"></p>
+
+                <footer class="dashboard-footer">
+                    <span>Small steps lead to big results.</span>
+                    <span>Made for your productivity ✨</span>
+                </footer>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
