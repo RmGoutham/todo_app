@@ -24,7 +24,7 @@ body {
     font-family: Inter, "Segoe UI", Arial, sans-serif;
     color: var(--text);
     background:
-        radial-gradient(ellipse at 10% 0%, #e8e5ff 0, transparent 36%),
+        radial-gradient(ellipse at 10% 0%, #372a96 0, transparent 36%),
         radial-gradient(ellipse at 100% 30%, #e4f2ff 0, transparent 30%),
         var(--background);
 }
